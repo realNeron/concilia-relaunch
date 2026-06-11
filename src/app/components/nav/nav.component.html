@@ -1,0 +1,45 @@
+<nav class="navbar">
+  <div class="container navbar-container">
+    <!-- Logo and Brand -->
+    <div class="brand-container">
+      <a routerLink="/" class="navbar-logo" (click)="closeMenu()">
+        <img src="concilia-logo.jpg" alt="Concilia GmbH Logo" class="brand-logo-img">
+      </a>
+      <span class="brand-slogan">Kompetenz, Vertrauen und Erfahrung</span>
+    </div>
+
+    <!-- Original Slogan (Desktop only) -->
+    <div class="maklerkonzept-header">
+      <strong>Das Maklerkonzept</strong>
+      <span>Gut versichert sein und trotzdem sparen!</span>
+    </div>
+
+    <!-- Hamburger Icon for Mobile -->
+    <button class="menu-toggle" [class.open]="isMenuOpen" (click)="toggleMenu()" aria-label="Menü umschalten">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="navbar-menu" [class.open]="isMenuOpen">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Startseite</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/erstinformationen" routerLinkActive="active" (click)="closeMenu()">Erstinformationen</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/impressum" routerLinkActive="active" (click)="closeMenu()">Impressum</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/datenschutz" routerLinkActive="active" (click)="closeMenu()">Datenschutz</a>
+        </li>
+      </ul>
+      <div class="nav-cta">
+        <a href="mailto:info@concilia-gmbh.de" class="btn btn-primary btn-sm">Kontakt</a>
+      </div>
+    </div>
+  </div>
+</nav>

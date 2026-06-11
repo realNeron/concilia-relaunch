@@ -1,0 +1,147 @@
+/* Impressum Component Styles */
+
+/* Common Page Header Style */
+.page-header {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 100px;
+  background-color: var(--bg-primary);
+  border-radius: 100%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.page-title {
+  color: var(--text-on-primary);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+}
+
+.page-description {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Page Content */
+.page-content {
+  background-color: var(--bg-secondary);
+  padding-top: 50px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card {
+  height: fit-content;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  color: var(--text-secondary);
+}
+
+.company-name {
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.company-detail {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 20px 0;
+}
+
+/* Lists */
+.address-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.address-details li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  padding-bottom: 10px;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.address-details li strong {
+  color: var(--text-primary);
+  min-width: 120px;
+}
+
+.address-details li a {
+  color: var(--accent-hover);
+  font-weight: 600;
+}
+
+.address-details li a:hover {
+  color: var(--accent);
+}
+
+.text-flow p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.text-flow a {
+  color: var(--accent-hover);
+  font-weight: 600;
+}
+
+.text-flow a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 60px 0;
+  }
+  
+  .address-details li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
